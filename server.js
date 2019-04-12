@@ -10,8 +10,8 @@ app.use(require('./routes/api').route)
 
 app.use(express.static(path.join(__dirname,'public')))
 
+const PORT = process.env.PORT || 8888 
 
-
-app.listen(8888, ()=>{
-    console.log('Server listenig at 8888')
+app.listen(PORT, ()=>{
+    console.log('Server listenig at '+PORT)
 })  
